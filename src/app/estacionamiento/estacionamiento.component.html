@@ -1,0 +1,15 @@
+<div>
+  <h2>Calculadora de Estacionamiento</h2>
+
+  <form (submit)="calcularCosto()">
+    <label for="horas">Horas:</label>
+    <input type="number" id="horas" name="horas" [(ngModel)]="horas" required>
+
+    <label for="minutos">Minutos:</label>
+    <input type="number" id="minutos" name="minutos" [(ngModel)]="minutos" required>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  <p *ngIf="resultado !== undefined">El costo del estacionamiento es: {{ resultado | currency: 'USD' }}</p>
+</div>
